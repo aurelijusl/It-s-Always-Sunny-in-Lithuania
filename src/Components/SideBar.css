@@ -1,0 +1,53 @@
+.sidebar {
+  width: 374px;
+  height: 654px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background: #5fa6f1 0% 0% no-repeat padding-box;
+  font-family: Nunito;
+  border-radius: 15px;
+  margin: 50px;
+}
+
+.content h2 {
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+.sidebar img {
+  width: 81px;
+  height: 85px;
+  margin-right: 25px;
+}
+
+.content {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weath {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  color: white;
+  width: 90%;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 20px;
+}
+
+.weath h1 {
+    font-size: 54px;
+}

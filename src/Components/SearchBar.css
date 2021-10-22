@@ -1,0 +1,12 @@
+input {
+  width: 330px;
+  height: 38px;
+  border-radius: 13px;
+  outline: none;
+  border: none;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px;
+}
+
