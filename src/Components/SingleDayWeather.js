@@ -5,6 +5,8 @@ import Weather from "./Weather";
 const SingleDayWeather = (props) => {
   const [dayName, setDayName] = useState();
   const weekday = props.weekday;
+  const stamps = props.forecastTimestamps;
+  const day = props.day;
 
   useEffect(() => {
     switch (weekday) {
@@ -33,8 +35,6 @@ const SingleDayWeather = (props) => {
         setDayName("Unknown");
     }
   }, [weekday]);
-  const stamps = props.forecastTimestamps;
-  const day = props.day;
 
   return (
     <tr>

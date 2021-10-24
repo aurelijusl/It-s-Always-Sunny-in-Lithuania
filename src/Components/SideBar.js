@@ -5,10 +5,14 @@ import { useState, useEffect } from "react";
 import useFetch from "../Hooks/useFetch";
 
 const SideBar = ({ handleTermChange, weatherForecast }) => {
-  const { data: places, error, isPending } = useFetch("https://api.meteo.lt/v1/places");
+  const {
+    data: places,
+    error,
+    isPending,
+  } = useFetch("https://api.meteo.lt/v1/places");
+
   const [term, setTerm] = useState("");
   const [foundPlaces, setFoundPlaces] = useState([]);
-  const [searching, setSearching] = useState(true);
 
   useEffect(() => {
     if (term.length > 0) {
@@ -30,14 +34,19 @@ const SideBar = ({ handleTermChange, weatherForecast }) => {
   return (
     <div className="sidebar">
       <div className="content">
+        {isPending && <h1 className="signals">Loading...</h1>}
+        {error && <h1 className="signals">Unable to fetch the data.</h1>}
+
         <SearchBar handleChange={handleChange} />
-        {term.length > 0 && searching && (
-          <FoundList foundList={foundPlaces} 
-          handleChange={handleTermChange} 
-          />
+        {term.length > 0 && (
+          <FoundList foundList={foundPlaces} handleChange={handleTermChange} />
         )}
         <div className="weath">
-          <h1>{Math.round(weatherForecast.airTemperature) || 'Temp'}°</h1>
+          {weatherForecast ? (
+            <h1>{Math.round(weatherForecast.airTemperature)}°</h1>
+          ) : (
+            <h1>...</h1>
+          )}
         </div>
         <div className="chart">
           <h2>Now It's {weatherForecast.conditionCode}</h2>
@@ -47,7 +56,6 @@ const SideBar = ({ handleTermChange, weatherForecast }) => {
           <h4>Cloud cover: {weatherForecast.cloudCover} </h4>
           <h4>Sea level pressure: {weatherForecast.seaLevelPressure} </h4>
           <h4>Total precipitation: {weatherForecast.totalPrecipitation}</h4>
-          <h3>{searching.toString()}</h3>
         </div>
       </div>
     </div>

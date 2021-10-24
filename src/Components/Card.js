@@ -5,11 +5,13 @@ const Card = (props) => {
   return (
     <div onClick={() => props.handleClick(weatherForecast)} className="card">
       <h5>
-        {new Date(weatherForecast.forecastTimeUtc).getDay() === new Date().getDay() &&
-        (new Date(weatherForecast.forecastTimeUtc).getHours() <= new Date().getHours() &&
-        new Date(weatherForecast.forecastTimeUtc).getHours() + 4 > new Date().getHours())
-          ? "Now"
-          : weatherForecast.forecastTimeUtc}
+        {new Date(weatherForecast.forecastTimeUtc).getDay() ===
+          new Date().getDay() &&
+          new Date(weatherForecast.forecastTimeUtc).getHours() <=
+            new Date().getHours() &&
+          new Date(weatherForecast.forecastTimeUtc).getHours() + 4 >
+            new Date().getHours() &&
+          "Now"}
       </h5>
       <h2>{Math.round(weatherForecast.airTemperature)}°</h2>
       <h5>{weatherForecast.windSpeed} ms</h5>
