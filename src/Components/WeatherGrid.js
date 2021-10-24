@@ -4,35 +4,37 @@ import { useState, useEffect } from "react";
 import SingleDayWeather from "./SingleDayWeather";
 
 const WeatherGrid = ({ weather, handleClick }) => {
+  const [day, setDay] = useState(new Date('2021-10-26 13:52:24'));
   const stamps = weather.forecastTimestamps;
+
   const forecastDays = [
     {
-      weekday: "Sun",
-      day: 0,
+      weekday: day.getDay(),
+      day: day.getDate(),
     },
     {
-      weekday: "Mon",
-      day: 1,
+      weekday: new Date(day.getFullYear(),day.getMonth(),day.getDate()+1).getDay(),
+      day: day.getDate() + 1,
     },
     {
-      weekday: "Tue",
-      day: 2,
+      weekday: new Date(day.getFullYear(),day.getMonth(),day.getDate()+2).getDay(),
+      day: day.getDate() + 2,
     },
     {
-      weekday: "Wed",
-      day: 3,
+      weekday: new Date(day.getFullYear(),day.getMonth(),day.getDate()+3).getDay(),
+      day: day.getDate() + 3,
     },
     {
-      weekday: "Thu",
-      day: 4,
+      weekday: new Date(day.getFullYear(),day.getMonth(),day.getDate()+4).getDay(),
+      day: day.getDate() + 4,
     },
     {
-      weekday: "Fri",
-      day: 5,
+      weekday: new Date(day.getFullYear(),day.getMonth(),day.getDate()+5).getDay(),
+      day: day.getDate() + 5,
     },
     {
-      weekday: "Sat",
-      day: 6,
+      weekday: new Date(day.getFullYear(),day.getMonth(),day.getDate()+6).getDay(),
+      day: day.getDate() + 6,
     },
   ];
 

@@ -5,6 +5,7 @@ const SearchBar = ({ handleChange }) => {
     <div className="text">
       <input
         type="search"
+        maxLength="30"
         placeholder="Search location..."
         onChange={(e) => handleChange(e)}
       />

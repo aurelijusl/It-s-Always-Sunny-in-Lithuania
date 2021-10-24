@@ -1,12 +1,16 @@
 .foundList {
   background-color: white;
-  z-index: 0;
+  margin-top: 42px;
+  border-radius: 0 0 15px 15px;
+  border: none;
+  position: absolute;
+  width: 330px;
 }
 
 .place {
   padding: 2px 10px;
   font-family: Nunito;
-  border-bottom: 1px solid rgb(219, 219, 219);
+  border-top: 1px solid rgb(219, 219, 219);
 }
 
 .place:hover {
