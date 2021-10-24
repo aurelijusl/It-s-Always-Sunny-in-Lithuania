@@ -22,10 +22,8 @@ const Weather = (props) => {
           .map((filtered) => {
             return (
               <Card
-                airTemperature={filtered.airTemperature}
-                windSpeed={filtered.windSpeed}
-                time={filtered.forecastTimeUtc}
-                forecastTimeUtc={filtered.forecastTimeUtc}
+                weatherForecast={filtered}
+                handleClick={props.handleClick}
                 key={filtered.forecastTimeUtc}
               />
             );

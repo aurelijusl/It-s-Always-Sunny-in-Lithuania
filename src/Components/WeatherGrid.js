@@ -3,35 +3,35 @@ import "./WeatherGrid.css";
 import { useState, useEffect } from "react";
 import SingleDayWeather from "./SingleDayWeather";
 
-const WeatherGrid = ({ weather }) => {
+const WeatherGrid = ({ weather, handleClick }) => {
   const stamps = weather.forecastTimestamps;
   const forecastDays = [
     {
-      weekday: "Sunday",
+      weekday: "Sun",
       day: 0,
     },
     {
-      weekday: "Monday",
+      weekday: "Mon",
       day: 1,
     },
     {
-      weekday: "Tuesday",
+      weekday: "Tue",
       day: 2,
     },
     {
-      weekday: "Wednesday",
+      weekday: "Wed",
       day: 3,
     },
     {
-      weekday: "Thursday",
+      weekday: "Thu",
       day: 4,
     },
     {
-      weekday: "Friday",
+      weekday: "Fri",
       day: 5,
     },
     {
-      weekday: "Saturday",
+      weekday: "Sat",
       day: 6,
     },
   ];
@@ -48,7 +48,6 @@ const WeatherGrid = ({ weather }) => {
               <th>14:00</th>
               <th>18:00</th>
               <th>22:00</th>
-              <th>02:00</th>
             </tr>
           </thead>
           <tbody>
@@ -59,6 +58,7 @@ const WeatherGrid = ({ weather }) => {
                     forecastTimestamps={stamps}
                     weekday={day.weekday}
                     day={day.day}
+                    handleClick={handleClick}
                     key={day.day}
                   />
                 );

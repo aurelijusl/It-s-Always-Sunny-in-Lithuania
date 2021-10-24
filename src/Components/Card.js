@@ -1,17 +1,18 @@
 import "./Card.css";
 
 const Card = (props) => {
+  const weatherForecast = props.weatherForecast;
   return (
-    <div className="card">
+    <div onClick={() => props.handleClick(weatherForecast)} className="card">
       <h5>
-        {new Date(props.forecastTimeUtc).getDay() === new Date().getDay() &&
-        (new Date(props.forecastTimeUtc).getHours() <= new Date().getHours() &&
-        new Date(props.forecastTimeUtc).getHours() + 4 > new Date().getHours())
+        {new Date(weatherForecast.forecastTimeUtc).getDay() === new Date().getDay() &&
+        (new Date(weatherForecast.forecastTimeUtc).getHours() <= new Date().getHours() &&
+        new Date(weatherForecast.forecastTimeUtc).getHours() + 4 > new Date().getHours())
           ? "Now"
-          : props.forecastTimeUtc}
+          : weatherForecast.forecastTimeUtc}
       </h5>
-      <h2>{Math.round(props.airTemperature)}°</h2>
-      <h5>{props.windSpeed} ms</h5>
+      <h2>{Math.round(weatherForecast.airTemperature)}°</h2>
+      <h5>{weatherForecast.windSpeed} ms</h5>
     </div>
   );
 };

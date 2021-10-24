@@ -9,22 +9,19 @@ const SingleDayWeather = (props) => {
     <tr>
       <td className="day">{day === new Date().getDay() ? "Today" : weekday}</td>
       <td>
-        <Weather forecastTimestamps={stamps} day={day} hour={6} />
+        <Weather forecastTimestamps={stamps} day={day} hour={6} handleClick={props.handleClick} />
       </td>
       <td>
-        <Weather forecastTimestamps={stamps} day={day} hour={10} />
+        <Weather forecastTimestamps={stamps} day={day} hour={10} handleClick={props.handleClick} />
       </td>
       <td>
-        <Weather forecastTimestamps={stamps} day={day} hour={14} />
+        <Weather forecastTimestamps={stamps} day={day} hour={14} handleClick={props.handleClick} />
       </td>
       <td>
-        <Weather forecastTimestamps={stamps} day={day} hour={18} />
+        <Weather forecastTimestamps={stamps} day={day} hour={18} handleClick={props.handleClick} />
       </td>
       <td>
-        <Weather forecastTimestamps={stamps} day={day} hour={22} />
-      </td>
-      <td>
-        <Weather forecastTimestamps={stamps} day={day} hour={2} />
+        <Weather forecastTimestamps={stamps} day={day} hour={22} handleClick={props.handleClick} />
       </td>
     </tr>
   );

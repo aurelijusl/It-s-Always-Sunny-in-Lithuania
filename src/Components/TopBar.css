@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
 
 .bar {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 111px;
-    background-color: #FFFFFF;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 111px;
+  background-color: #ffffff;
 }
 
 .bar h1 {
-    font-family: Nunito;
-    font-weight: 900;
-    margin-left: 50px;
-    color: #5FA6F1;
+  font-family: Nunito;
+  font-weight: 900;
+  margin-left: 50px;
+  color: #5fa6f1;
 }
