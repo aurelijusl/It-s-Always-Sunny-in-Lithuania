@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import SingleDayWeather from "./SingleDayWeather";
 
 const WeatherGrid = ({ weather, handleClick }) => {
-  const [day, setDay] = useState(new Date('2021-10-26 13:52:24'));
+  const [day, setDay] = useState(new Date());
   const stamps = weather.forecastTimestamps;
 
   const forecastDays = [
