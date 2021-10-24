@@ -25,7 +25,7 @@ const SideBar = ({ handleTermChange, weatherForecast }) => {
         setFoundPlaces(found);
       }
     }
-  }, [term]);
+  }, [term, places]);
 
   const handleChange = (e) => {
     setTerm(e.target.value);
