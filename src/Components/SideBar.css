@@ -17,16 +17,10 @@
   font-weight: 700;
 }
 
-.sidebar img {
-  width: 81px;
-  height: 85px;
-  margin-right: 25px;
-}
-
 .content {
-    margin: 30px;
-    display: flex;
-    flex-direction: column;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .weath {
@@ -34,20 +28,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 20px;
-  margin-bottom: 0;
-  margin-left: 20px;
   color: white;
-  width: 90%;
+  width: 100%;
 }
 
 .chart {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  font-family: Nunito;
+}
+
+.chart h4 {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .weath h1 {
-    font-size: 54px;
+  font-size: 54px;
+  padding: 0;
+  margin-bottom: 0px;
+  margin-top: 40px;
 }

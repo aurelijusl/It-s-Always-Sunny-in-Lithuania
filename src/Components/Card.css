@@ -1,0 +1,16 @@
+.card {
+  width: 178px;
+  height: 209px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  margin: 1px;
+}
+
+.card:hover {
+    background-color: #AFD6FF;
+    cursor: pointer;
+}

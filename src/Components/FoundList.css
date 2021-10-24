@@ -1,0 +1,15 @@
+.foundList {
+  background-color: white;
+  z-index: 0;
+}
+
+.place {
+  padding: 2px 10px;
+  font-family: Nunito;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.place:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}

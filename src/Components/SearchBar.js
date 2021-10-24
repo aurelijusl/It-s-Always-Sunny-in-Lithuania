@@ -1,12 +1,12 @@
 import "./SearchBar.css";
 
-const SearchBar = (props) => {
+const SearchBar = ({ handleChange }) => {
   return (
-    <div className="search">
+    <div className="text">
       <input
         type="search"
         placeholder="Search location..."
-        onChange={(e) => props.handleChange(e)}
+        onChange={(e) => handleChange(e)}
       />
     </div>
   );

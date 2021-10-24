@@ -1,0 +1,25 @@
+.weatherGrid {
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  font-family: Nunito;
+}
+
+table td {
+  text-align: center;
+}
+
+.empty {
+  background-color: transparent;
+  width: 150px;
+}
+
+table th {
+  text-align: center;
+  background-color: white;
+  height: 60px;
+  border-radius: 20px 20px 0 0;
+  width: 178px;
+}

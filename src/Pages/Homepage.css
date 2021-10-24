@@ -1,3 +1,5 @@
 .home {
     background-color: #F5F6FA;
+    display: flex;
+    align-items: flex-start;
 }
